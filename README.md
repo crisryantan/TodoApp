@@ -1,7 +1,7 @@
 TodoApp
 =======
 
-Simple Realtime TodoApp using NodeJS,mongodb and jquery. D:
+Simple Realtime TodoApp with User Login using NodeJS,mongodb and jquery. D:
 
 clone this repository
 
