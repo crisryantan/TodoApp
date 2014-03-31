@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<title>Hugewall</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/structure.css">
+	<link rel="stylesheet" type="text/css" href="css/todo.css">
+	<link rel="stylesheet" type="text/css" href="css/data.css">
+
+</head>
+<body>
+		<div id='todo'>
+			<a href="/logout" id='logout'>Logout</a>
+			<h3>Welcome <%= user.username %>.</h3>
+
+			<form action='/create' id='form' method='post' name='addTodo' accept-charset='utf-8'>
+				Message: <input type='text' name='message' id='textField' placeholder='Enter todo here'></input>
+			<button id='add'>Add</button>
+			<br />
+			</form>
+			<div>
+			<ul id='messages'>
+			<% todo.forEach( function ( todo ){ %>
+			  <div class="item">
+			    <input type="text" id="<%= todo._id %>" class="update-link"  title="Update this todo item" name="toEdit" value="<%= todo.content%>"></input>
+			    <a class="del-btn" id="<%= todo._id %>" href="" title="Delete this todo item">Delete</a>
+			  </div>
+			<% }); %>
+			</div>
+			</ul>
+		</div>
+
+		<script type='text/javascript' src='js/jquery.js'> </script>
+		<script type='text/javascript' src='js/script.js'> </script>
+</body>
+</html>
